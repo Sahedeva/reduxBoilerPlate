@@ -59,7 +59,9 @@ const store = createStore(
 );
 
 export default store;
-      ```
+
+```
+
     * this sets up a store and connects it to chrome redux dev tools so you can debug easier
     * basiclly - your store is the go between for your app - it can take in actions and feed
       reducers with initial state and the action and recieve updated state which it then
@@ -70,7 +72,9 @@ export default store;
 
 export const FETCH_POSTS = "FETCH_POSTS";
 export const NEW_POST = "NEW_POST";
-      ```
+
+```
+
   * This is to set up a boiler plate types to fetch posts and to create a new post
   * Hit command + s to save
 3. Click postActions.js in actions folder and type:
@@ -108,8 +112,10 @@ export const createPost = postData => dispatch => {
     );
 };
 
-      ```
-  * Basically this is the dispatching of actions to the store - in this case, this is boiler plate using fake rest calls from https://jsonplaceholder.typicode.com/
+```
+
+  * Basically this is the dispatching of actions to the store - in this case, this is boiler
+    plate using fake rest calls from https://jsonplaceholder.typicode.com/
   * In this example there are two post actions - fetch and new
   * Hit command + s to save
 4. Click index.js in reducers folder and type:
@@ -122,9 +128,10 @@ export default combineReducers({
   posts: postReducer
 });
 
+```
 
-      ```
-  * Basically this is the rootReducer which will combine the reducers. In this case, there is only one reducer.
+  * Basically this is the rootReducer which will combine the reducers. In this case,
+    there is only one reducer.
   * Hit command + s to save
 5. Click postReducer.js in reducers folder and type:
 ```javascript
@@ -155,9 +162,11 @@ export default function(state = initialState, action) {
   }
 }
 
-      ```
+```
+
   * This is the postReducer which will take in state and action from the store.
-  * It will use this information to return the updated state based on the action.type and action.payload that was fed to the store from the dispatch function of the actions.
+  * It will use this information to return the updated state based on the action.type and
+    action.payload that was fed to the store from the dispatch function of the actions.
   * Hit command + s to save
 
 ### Getting react components to communicate with redux
@@ -214,8 +223,8 @@ function App() {
 
 export default App;
 
+```
 
-      ```
   * The main reduxy thing is the Provider wrapper around the main div element which has the store as props.
   * The main imports are the Provider and store, as well as the components that will be the basic post app.
   * Hit command + s to save
@@ -270,10 +279,14 @@ export default connect(
   { fetchPosts }
 )(Posts);
 
-      ```
+```
+
   * This is the main component which also includes the form component element.
-  * Note that state is not used but props are use instead and the state is mapped to props in a funtion - the state will come from the store which is provided by the Provider wrapper in the App.js file.
-  * The wiring of the component to redux is fairly complicated - you need to import connect, proptypes and the fetch action.
+  * Note that state is not used but props are use instead and the state is mapped to props in a
+    funtion - the state will come from the store which is provided by the Provider
+    wrapper in the App.js file.
+  * The wiring of the component to redux is fairly complicated - you need to import connect,
+    proptypes and the fetch action.
   * Note: you don't export the class directly but do it via the connect function.
   * Hit command + s to save
 5. Click Postform.js in components folder and type:
@@ -353,10 +366,13 @@ export default connect(
   { createPost }
 )(Postform);
 
-      ```
+```
+
   * This is the form component 
-  * The wiring of the component to redux is fairly complicated - you need to import connect, proptypes and the create action.
-  * Note: unlike with the fetch action, this component can use state b/c it is feeding this state as props to action dispatch.
+  * The wiring of the component to redux is fairly complicated - you need to import connect,
+    proptypes and the create action.
+  * Note: unlike with the fetch action, this component can use state b/c it is feeding this
+    state as props to action dispatch.
   * Note: you don't export the class directly but do it via the connect function.
   * Hit command + s to save
 
@@ -370,7 +386,8 @@ Replace .App styling with:
   width: 90%;
   margin: auto;
 }
-      ```
+```
+
 ### Run app
 In command line from root type:
 ```
