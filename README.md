@@ -61,8 +61,7 @@ const store = createStore(
 export default store;
 
 ```
-```
-```
+
   * this sets up a store and connects it to chrome redux dev tools so you can debug easier
   * basiclly - your store is the go between for your app - it can take in actions and feed
     reducers with initial state and the action and recieve updated state which it then
@@ -225,8 +224,7 @@ function App() {
 export default App;
 
 ```
-```
-```
+
   * The main reduxy thing is the Provider wrapper around the main div element which has the store as props.
   * The main imports are the Provider and store, as well as the components that will be the basic post app.
   * Hit command + s to save
