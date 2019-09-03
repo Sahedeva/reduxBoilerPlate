@@ -391,5 +391,6 @@ Replace .App styling with:
 ### Run app
 In command line from root type:
 ```
+npm install
 npm start
 ```
