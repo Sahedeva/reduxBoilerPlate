@@ -47,7 +47,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers";
 
-const initalState = [];
+const initalState = {};
 const middleware = [thunk];
 const store = createStore(
   rootReducer,
@@ -368,7 +368,7 @@ export default connect(
 
 ```
 
-  * This is the form component 
+  * This is the form component
   * The wiring of the component to redux is fairly complicated - you need to import connect,
     proptypes and the create action.
   * Note: unlike with the fetch action, this component can use state b/c it is feeding this
